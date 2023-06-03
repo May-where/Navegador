@@ -10,30 +10,35 @@
     >
 
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fondologin" />
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/materialtoolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:navigationIcon="@drawable/baseline_menu_24"
-                app:navigationIconTint="#EDE3E3"
+                app:navigationIconTint="#FFFEFE"
                 app:title="Academia de danza"
-                app:titleTextColor="#FFFCFC"
-                app:menu="@menu/appbarmenu"
-                />
+                app:titleTextColor="#FFFCFC" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <FrameLayout
             android:id="@+id/framlayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="?attr/actionBarSize"
             />
 
@@ -47,5 +52,6 @@
         android:layout_gravity="start"
         app:menu="@menu/navigation_itme"
         />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

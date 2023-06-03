@@ -3,26 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:orientation="vertical"
+    android:padding="13dp"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
+
         <ImageView
-            android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:src="@drawable/login"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
+            android:src="@drawable/login"
 
             />
 
-        <TextView
-            android:id="@+id/textview"
+        <TextureView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Mas Informacion"
-            android:textSize="20dp"
+            android:textSize="30dp"
             />
 
     </LinearLayout>

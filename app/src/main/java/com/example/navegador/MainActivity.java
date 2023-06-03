@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     FrameLayout framlayout;
     NavigationView navigationview;
 
-
     TextView textview;
 
     View navitga;
@@ -53,10 +52,14 @@ public class MainActivity extends AppCompatActivity {
 
         
         drawerlayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
 
         navigationview.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                
 
                 if(item.getItemId()==R.id.Home){
                     textview.setText("Academia de danza DANILOVA");
@@ -77,24 +80,15 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "HipHop", Toast.LENGTH_SHORT).show();
                     drawerlayout.closeDrawer(GravityCompat.START);
                 }
+
+                else if (item.getItemId()==R.id.Cumbia){
+                    Toast.makeText(MainActivity.this, "Cumbia", Toast.LENGTH_SHORT).show();
+                    drawerlayout.closeDrawer(GravityCompat.START);
+                }
                 return true;
             }
         });
-     materialtoolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-         @Override
-         public boolean onMenuItemClick(MenuItem item) {
 
-             if(item.getItemId()==R.id.Home1){
-                 Fragment(new HomeFragment());
-                 Toast.makeText(MainActivity.this, "Home1", Toast.LENGTH_SHORT).show();
-             } else if (item.getItemId()==R.id.Notification){
-                 Toast.makeText(MainActivity.this, "Notification", Toast.LENGTH_SHORT).show();
-
-             }
-
-             return false;
-         }
-     });
     }
 
     private void Fragment (Fragment fragment){
